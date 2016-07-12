@@ -1,0 +1,119 @@
+//
+//  XY2passion.pch
+//  XY2Player
+//
+//  Created by zxs on 16/3/21.
+//  Copyright © 2016年 YSKS.cn. All rights reserved.
+//
+
+#ifndef XY2passion_pch
+#define XY2passion_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "XYZTabbar.h"
+#import "XYZRecommend.h"
+#import "XYZHotTableController.h"
+#import "XYZChannelController.h"
+#import "XYZMemberController.h"
+#import "AFHTTPRequestOperationManager.h"
+#import <SDCycleScrollView.h>
+#import "UIImageView+WebCache.h"
+#import "XYZPlayerViewController.h"
+#import "BlockSort.h"
+#import "UIViewController+HUD.h"
+#import "RootViewController.h"
+#import "DHFirstViewController.h"
+#import "XYZHitViewController.h"
+
+#import "XYZRecommend2.h"
+#import "XYZRecommend3.h"
+#import "XYZRecommend4.h"
+// payView
+#import "WXPayView.h"
+
+// model
+#import "XYZRecommendModel.h"
+#import "XYZNextChannel.h"
+#import "XYZHotModel.h"
+#import "XYZChannel.h"
+// 其他接口的model
+#import "XYZFirstModel.h"
+#import "XYZHitModel.h"
+#import "XYZRecom2Model.h"
+#import "XYZRecommend3Model.h"
+#import "XYZRecom4Model.h"
+#import "XYZNextRecommend4Model.h"
+
+// by dh 2016年04月01日16:04:43
+#import "FMDatabase.h"
+// wx
+#import "WXApi.h"
+#import "XYZ_HZVipModel.h"
+
+//APP端签名相关头文件
+#import "payRequsestHandler.h"
+//服务端签名只需要用到下面一个头文件
+//#import "ApiXml.h"
+#import <QuartzCore/QuartzCore.h>
+#import "WXApiObject.h"
+#import "XYZ_HZVipDao.h"
+#import "MobClick.h"
+#define WIDTH   [[UIScreen mainScreen] bounds].size.width
+#define HEIGHT  [[UIScreen mainScreen] bounds].size.height
+
+#define kUIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+// 播放器
+#define TOPHEIGHT 25          // 上间距
+#define PLAYERhEIGHT 220      // 播放器高度
+#define PLAYButtonH 25        // 开始、暂停
+#define TIMELABELW 80         // 时间宽度
+
+
+// 遮罩标示表示 直接传图片或者视频
+#define INDEXMASK    @"hot"       // 表示不需要遮罩 （SECONIMAGE就不需要判断）
+#define INDEXMASKNO  @"nohot"     // 需要遮罩   （SECONIMAGE必须判断）
+#define SECONIMAGE   @"sec"       // http 请求图片不需要添加前缀域名
+#define SECONIMAGENO @"nosec"     // 
+#define NOavailable  @"noPlayer"  // 暂时无影片源
+
+// 计算cell ===
+#define CellHeight 130        // 高度
+#define XYImageWidth (WIDTH-15)/2  // 宽度
+#define XYImageWidthT (CellHeight+2)  // 上下间距整合
+
+
+// === 仿网易tile
+#define SCROLLER 35
+#define LABELW 100  // 控制标题所有的宽度 （是所有）
+// 推荐
+#define CarouselHeight 180  // 轮播高度
+
+#define TandBspacing 5     // 上下间距
+#define ImageWidth   (WIDTH-Leftspacing-Rightspacing-LRspacing)/2    // 宽
+#define ImageHeight  ImageWidth+30    // 高
+#define Leftspacing  10     // 左
+#define Rightspacing 10     // 右
+#define LRspacing    15
+
+// 热播
+#define HitTandBspacing 15     // 上下间距
+#define HitImageHeight  ImageWidth - 20    // 高
+// 热门
+#define HeaderImageWidth 100
+
+
+// nextCollectoion
+#define NEXTCHANNELCELLH 45
+
+
+// http
+#define XY2HTTP @"http://www.simiyy.com:8079"
+#define XY2HTTP1 @"http://api5.lingte.cc/"
+#define XY2HTTP2 @"http://iosts.zhangqus.com/"
+
+
+#endif /* XY2passion_pch */
